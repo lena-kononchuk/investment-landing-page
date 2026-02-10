@@ -11,21 +11,20 @@ import { deleteAsync } from 'del'; // Importing deleteAsync for cleaning the bui
 // Paths to source files and destination folder
 const paths = {
   html: {
-    src: 'Index.html', // Source HTML file
-    dest: 'build/' // Destination folder for HTML
+    src: 'index.html',
+    dest: 'build/'
   },
   styles: {
-    // Minified version of CSS that you are already using
-    src: 'css/styles.min.css', // Path to the minified CSS file
-    dest: 'build/css/' // Destination folder for CSS
+    src: 'css/styles.min.css',
+    dest: 'build/css/'
   },
   scripts: {
     src: ['js/app.js', 'js/validation.js', 'js/range.js'],
-    dest: 'build/js/' // Destination folder for JavaScript
+    dest: 'build/js/'
   },
   images: {
-    src: 'img/**/*', // Source image files
-    dest: 'build/img/' // Destination folder for images
+    src: 'img/**/*',
+    dest: 'build/img/'
   }
 };
 
