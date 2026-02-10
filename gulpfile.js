@@ -35,9 +35,12 @@ const clean = () => {
 
 // Task for processing HTML files
 const html = () => {
-  return gulp.src(paths.html.src) // Source HTML file
-    .pipe(htmlmin({ collapseWhitespace: true })) // Minifying HTML
-    .pipe(gulp.dest(paths.html.dest)); // Saving minified HTML to the build folder
+  return gulp.src(paths.html.src)
+    .pipe(htmlmin({
+      collapseWhitespace: true,
+      removeComments: true
+    }))
+    .pipe(gulp.dest(paths.html.dest));
 };
 
 // Task for copying minified CSS (using the already minified file)
